@@ -5,13 +5,14 @@ const app = express()
 
 app.use(express.json())
 
+//Default data
 let CONTACTS = [
   {id: '1', name: 'Leonardo', value: '820954413', marked: false}
 ]
 
 const CONTACT_ROUTE = '/api/contacts'
 
-//SetTimeout for simulate delay betwen request and response from server when data is huge
+//SetTimeout to simulate delay betwen request and response from server when data is huge
 //GET
 app.get(CONTACT_ROUTE, (req, res) => {
   setTimeout(() => {
